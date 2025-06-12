@@ -1,8 +1,9 @@
+// Commit: Inisialisasi array string kosong untuk 5 nama
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    cout << "poliban juara";
-    cout << "Indonesia Hebat";
+    string names[5]; // Array dengan 5 elemen string
     return 0;
 }
