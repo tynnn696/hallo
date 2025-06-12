@@ -1,21 +1,30 @@
-// Commit: Menampilkan data dalam array
+// Commit: Mengubah program agar menerima input jumlah nama yang ingin diproses
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
-    string names[5];
+    int jumlah;
+    cout << "Masukkan jumlah nama yang ingin dimasukkan: ";
+    cin >> jumlah;
 
-    names[0] = "Dustyn";
-    names[1] = "Rakha";
-    names[2] = "Eko";
-    names[3] = "Bima";
-    names[4] = "Bingo";
+    // Buat array dinamis
+    string* names = new string[jumlah];
 
-    cout << "Daftar Nama:\n";
-    for (int i = 0; i < 5; i++) {
+    // Input nama
+    for (int i = 0; i < jumlah; i++) {
+        cout << "Masukkan nama ke-" << (i + 1) << ": ";
+        cin >> names[i];
+    }
+
+    // Tampilkan nama
+    cout << "\nDaftar Nama:\n";
+    for (int i = 0; i < jumlah; i++) {
         cout << names[i] << endl;
     }
+
+    // Bebaskan memori
+    delete[] names;
 
     return 0;
 }
